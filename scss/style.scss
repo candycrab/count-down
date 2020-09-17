@@ -129,6 +129,9 @@ header {
       @include flex();
       li {
         margin-left: 20px;
+        @include phone() {
+          margin-left: 15px;
+        }
         i {
           font-size: 1.2rem;
         }
