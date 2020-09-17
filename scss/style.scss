@@ -5,28 +5,33 @@
 @import "./mixing";
 @import "./loader";
 
-.body-container {
+// body
+.body-bg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0% 60%;
   font-family: $font;
   color: $color;
+  // overly
   .overlay {
     background: $overlay;
     min-height: 100vh;
   }
+  // responsive
   @include tab() {
     min-height: 100%;
   }
   @include phone() {
     height: auto;
   }
+  // Container
   .container {
     width: 80%;
     margin: 0 auto;
     @include tab() {
       width: 96%;
     }
+    // heading text
     .heading-text {
       text-align: center;
       font-size: 2.5rem;
@@ -52,8 +57,7 @@
   }
 }
 
-// Count
-
+// Counters
 .count {
   @include flex();
 
@@ -61,6 +65,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  // single count
   li {
     margin: 15px;
     text-align: center;
@@ -73,6 +78,7 @@
       font-size: 1rem;
     }
   }
+  // number
   .number {
     display: block;
     padding: 40px 0;
@@ -81,24 +87,28 @@
       font-size: 2rem;
     }
   }
+  // name
   .name {
     padding: 10px 0px;
     display: block;
     text-transform: capitalize;
   }
-
+  // day
   #days {
     color: $day;
     border-bottom: 3px solid $day;
   }
+  // hours
   #hours {
     color: $hours;
     border-bottom: 3px solid $hours;
   }
+  // minutes
   #minutes {
     color: $min;
     border-bottom: 3px solid $min;
   }
+  // seconds
   #seconds {
     color: $sec;
     border-bottom: 3px solid $sec;
@@ -109,17 +119,19 @@
   }
 }
 
-// nav
+// header
 header {
   nav {
     @include flex();
     justify-content: space-between;
     padding-top: 15px;
+    // logo
     .logo {
       font-size: 1.3rem;
       border: 2px solid;
       padding: 5px 20px;
     }
+    // nav
     ul {
       @include flex();
       li {
@@ -163,7 +175,6 @@ header {
   }
 }
 
-// chackbox
 // Chackbox
 .darkmode-toggle {
   &:focus-within {

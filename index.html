@@ -3,23 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./fonts/fontawesome/css/all.min.css" />
+    <!-- Fav icon -->
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="./fonts/fontawesome/css/all.min.css" />
+    <!-- Style sheet -->
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Countdown</title>
+    <title>Upcoming - Under construction page</title>
   </head>
 
   <body>
+    <!-- Pre loader -->
     <div class="preloader show">
       <div class="preloader_inner">0%</div>
     </div>
-
-    <div class="body-container">
+    <!-- visible part -->
+    <div class="body-bg">
+      <!-- overly -->
       <div class="overlay">
         <div class="container">
+          <!-- header -->
           <header>
             <nav>
-              <div class="logo">Logo</div>
+              <div class="logo">Upcoming</div>
               <ul>
                 <li>
                   <a href="" target="_blank" rel="noopener noreferrer"
@@ -51,41 +57,51 @@
               </ul>
             </nav>
           </header>
-          <div class="middle">
+          <!-- Content / body -->
+          <div class="middle content">
+            <!-- coming soon text -->
             <div class="heading-text">
               <h1>Coming Soon . . .</h1>
               <p>We are building something new</p>
             </div>
+            <!-- Counts -->
             <ul class="count">
+              <!-- days -->
               <li>
                 <span id="days" class="number"></span
                 ><span class="name">days</span>
               </li>
+              <!-- hours -->
               <li>
                 <span id="hours" class="number"></span
                 ><span class="name">Hours</span>
               </li>
+              <!-- minutes -->
               <li>
                 <span id="minutes" class="number"></span
                 ><span class="name">Minutes</span>
               </li>
+              <!-- Secondes -->
               <li>
                 <span id="seconds" class="number"></span
                 ><span class="name">Seconds</span>
               </li>
             </ul>
-            <div class="button-container"></div>
           </div>
-
+          <!-- footer -->
           <footer>
             <p>Made by <i class="fas fa-heart"></i> Candy Crab</p>
           </footer>
         </div>
       </div>
     </div>
+    <!-- main js -->
     <script src="./js/main.js"></script>
+    <!-- count down -->
     <script src="./js/countDown.js"></script>
+    <!-- day and night mood -->
     <script src="./js/mood.js"></script>
+    <!-- pre loader -->
     <script src="./js/loader.js"></script>
   </body>
 </html>

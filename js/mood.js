@@ -1,8 +1,10 @@
-var themeSwitch = getElement("#toggle-checkbox");
+// variable assign
+let mood;
+let themeSwitch = getElement("#toggle-checkbox");
 
 const moodChanger = (mood) => {
   if (mood === "night") {
-    getElement(".body-container").style.backgroundImage = `url(
+    getElement(".body-bg").style.backgroundImage = `url(
       "../images/night.jpeg"
     )`;
     setProperty("--overlay", "#00000052");
@@ -24,12 +26,14 @@ const moodChanger = (mood) => {
     setProperty("--sec", "#333333");
     setProperty("--color", "black");
     setProperty("--bg", "white");
-    getElement(".body-container").style.backgroundImage = `url(
+    getElement(".body-bg").style.backgroundImage = `url(
       "../images/day.jpeg"
     )`;
+    getElement(".body-bg").style.backgroundPosition = "0% 43%";
   }
 };
 
+// local storage data save and get
 const setMood = (mood) => {
   const moodData = localStorage.getItem("count-down-mood");
   if (!moodData) {
@@ -42,12 +46,12 @@ const setMood = (mood) => {
     } else return moodData;
   }
 };
-
+// funtion call
 moodChanger(setMood());
 mood = setMood();
 
 mood === "night" ? (themeSwitch.checked = true) : (themeSwitch.checked = false);
-
+// event listener
 themeSwitch.addEventListener("click", () => {
   if (themeSwitch.checked) {
     setMood("night");
